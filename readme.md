@@ -59,9 +59,10 @@ To group data by orderID and lookup data from lookup table
 <br />
 
 **Code:** <br />
-`from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, firstdf = df.groupBy("orderID").agg(collect_list("Sub-Category").alias("Agg_Sub_Category"))`
-` `
-` `
+```
+from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, firstdf = df.groupBy("orderID").agg(collect_list("Sub-Category").alias("Agg_Sub_Category"))
+
+```
 
 <br />
 

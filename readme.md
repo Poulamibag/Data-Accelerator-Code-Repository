@@ -29,11 +29,8 @@ Our code repository showcases PySpark transformations tailored for data preproce
 <br /><br />
 
 
-> Why SageMaker?
-
-> 
-
-> We chose Amazon SageMaker for its comprehensive suite of ETL (Extract, Transform, Load) features, which perfectly align with our requirements. SageMaker provides capabilities for data collection, file lookup, incremental loads, out-of-the-box (OOTB) custom code transformations, and folder-level processing—all essential components for building our middleware solution efficiently.
+> Why SageMaker? <br />
+We chose Amazon SageMaker for its comprehensive suite of ETL (Extract, Transform, Load) features, which perfectly align with our requirements. SageMaker provides capabilities for data collection, file lookup, incremental loads, out-of-the-box (OOTB) custom code transformations, and folder-level processing—all essential components for building our middleware solution efficiently.
 Through SageMaker's Data Wrangler, we can easily create data flows to ingest, preprocess, and transform data from diverse sources, including Amazon S3. The visual interface simplifies the creation of data transformation steps, enabling us to apply data type conversions, fill missing values, and perform advanced analytics effortlessly.
 Furthermore, SageMaker offers flexibility in incorporating custom PySpark transformations, as demonstrated in our code repository. This allows us to address specific business requirements and implement complex data processing logic tailored to our use case.
 In summary, SageMaker provides a powerful yet user-friendly platform for building end-to-end data pipelines, facilitating seamless data transformation and integration with Adobe Experience Platform (AEP) or other analytics platforms.

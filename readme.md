@@ -47,7 +47,8 @@ In summary, SageMaker provides a powerful yet user-friendly platform for buildin
    - Fill Missing Values: Add another transformation step by clicking the "+" icon. Choose "Fill Missing Values" and configure it to fill empty email values with null.
    - Custom Transformation: For the custom transformations, you need to define a Pyspark script: Click on the "+" icon to add a transformation step.  Choose "Custom Transformation". Write Pyspark code to define the custom function to extract the primary identifier and apply it to create a new column "primaryIdentifier". Also, write code to identify timestamp-type columns, convert timestamp format, filter rows with status "Active", get all column names except the grouping column ("email"), and group data by orderID while aggregating product information into a list.
 
-Dataflow Name
+> [!NOTE]
+> Dataflow Name
 > CustomerData.flow
 
 <br />

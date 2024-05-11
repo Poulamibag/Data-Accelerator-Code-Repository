@@ -56,12 +56,12 @@ In summary, SageMaker provides a powerful yet user-friendly platform for buildin
 ### Transformation 1 :
 To group data by orderID and lookup data from lookup table 
 
-Code: <br />
+**Code:** <br />
 `from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, first
 df = df.groupBy("orderID").agg(
     collect_list("Sub-Category").alias("Agg_Sub_Category"))`
 
-Sample Input:
+**Sample Input:**
 orderID | productPrice | productSKU_ID | productName | orderDate | email | phoneNumber | status
 :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---:
 af4c6bc4-1e01-4e07-9464-d8acab64888d | 4278.73 | 4G09V46DQ64 | Squash - Acorn | 7/27/2023 | jscottini0@washington.edu | null | Active
@@ -80,7 +80,7 @@ af4c6bc4-1e01-4e07-9464-d8acab64888d | 837.22 | 5YD4HW7RF80 | Cake - Box Window 
 
 <br />
 
-Lookup Table:
+**Lookup Table:**
 Product ID | Sub-Category
 :---: | :---:
 4G09V46DQ64 | fruit
@@ -90,7 +90,7 @@ Product ID | Sub-Category
 
 <br />
 
-Sample Ouput:
+**Sample Ouput:**
 orderID | productLineItem | totalOrderValue | subCategory
 :---: | :---: | :---: | :---:
 af4c6bc4-1e01-4e07-9464-d8acab64888d | "[{4G09V46DQ64 |  ""Squash - Acorn"" |   4278.73} |  {6PE8MF9NP67 |  ""Lettuce - Sea / Sea Asparagus"" |  78.8 } |  {5YD4HW7RF80 |  ""Cake - Box Window 10x10x2.5"" |  827.22 }]" | $5194.65 | "[""fruit"" |  “vegetable” |  “cake”]"

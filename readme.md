@@ -59,7 +59,9 @@ To group data by orderID and lookup data from lookup table
 <br />
 
 **Code:** <br />
-```from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, firstdf = df.groupBy("orderID").agg(collect_list("Sub-Category").alias("Agg_Sub_Category"))```
+```
+from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, firstdf = df.groupBy("orderID").agg(collect_list("Sub-Category").alias("Agg_Sub_Category"))
+```
 
 <br />
 
@@ -107,7 +109,9 @@ b9934c8b-003b-4ccb-932f-992637fad535|"[{8CT7K73UF98,""Wine - Magnotta - Cab Sauv
 <br />
 
 **Code:** <br />
-`df = df.groupBy("orderID").agg(collect_list(struct("productSKU_ID", "productName", "productPrice")).alias("productLineItem"))`
+```
+df = df.groupBy("orderID").agg(collect_list(struct("productSKU_ID", "productName", "productPrice")).alias("productLineItem"))
+```
 
 <br />
 
@@ -148,33 +152,34 @@ b9934c8b-003b-4ccb-932f-992637fad535|"[{8CT7K73UF98,""Wine - Magnotta - Cab Sauv
 <br />
 
 **Code:** <br />
-`from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, first`
+```
+from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, first
 
-`# Define a custom function to extract primary identifier
+# Define a custom function to extract primary identifier
 def extract_primary_identifier(email, phoneNumber):
     return when(col("email").isNotNull() & col("phoneNumber").isNotNull(), 
                 concat_ws(", ", col("email"), col("phoneNumber"))) \
            .when(col("email").isNotNull(), col("email")) \
-           .otherwise(col("phoneNumber"))`
+           .otherwise(col("phoneNumber"))
 
-`# Apply the custom function to create a new column "primaryIdentifier"
-df = df.withColumn("primaryIdentifier", extract_primary_identifier(col("email"), col("phoneNumber")))`
+# Apply the custom function to create a new column "primaryIdentifier"
+df = df.withColumn("primaryIdentifier", extract_primary_identifier(col("email"), col("phoneNumber")))
 
-`# Identify timestamp-type columns
-timestamp_columns = [col_name for col_name, dtype in df.dtypes if dtype == "timestamp"]`
+# Identify timestamp-type columns
+timestamp_columns = [col_name for col_name, dtype in df.dtypes if dtype == "timestamp"]
 
-`# Convert timestamp format for each identified column
+# Convert timestamp format for each identified column
 for column in timestamp_columns:
     df = df.withColumn(column, 
-                       date_format(to_timestamp(col(column), "yyyy-MM-dd HH:mm:ss"), "yyyy-MM-dd'T'HH:mm:ss.SS'Z'"))`
+                       date_format(to_timestamp(col(column), "yyyy-MM-dd HH:mm:ss"), "yyyy-MM-dd'T'HH:mm:ss.SS'Z'"))
 
-`# Filter rows with status "Active"
-df = df.filter(col("status") == "Active")`
+# Filter rows with status "Active"
+df = df.filter(col("status") == "Active")
 
-`# Get all column names except the grouping column ("email")
-other_columns = [c for c in df.columns if c != "email"]`
+# Get all column names except the grouping column ("email")
+other_columns = [c for c in df.columns if c != "email"]
 
-`# Group data by orderID and aggregate product information into a list
+# Group data by orderID and aggregate product information into a list
 df = df.groupBy("orderID").agg(
     collect_list(struct("productSKU_ID", "productName", "productPrice")).alias("productLineItem"),
     sum("productPrice").alias("totalOrderValue"),
@@ -182,4 +187,5 @@ df = df.groupBy("orderID").agg(
     first("email").alias("email"),
     first("phoneNumber").alias("phoneNumber"),
     first("primaryIdentifier").alias("primaryIdentifier")
-)`
+)
+```

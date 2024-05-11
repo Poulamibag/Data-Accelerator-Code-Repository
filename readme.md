@@ -10,8 +10,7 @@ Our objective is to develop a middleware solution capable of seamlessly transfor
 
 This solution is designed for organizations that receive data from customers in varying formats and need to unify and standardize it for further analysis or integration with AEP. It's suitable for scenarios where data needs to be cleansed, standardized, and enriched with additional insights before being ingested into AEP.
 
-[!Sample Input]
-The sample input comprises raw data files representing various customer-related information, product details, order records, and other relevant data. These files may come in formats like CSV, JSON, or Parquet, reflecting the diverse sources from which data is collected.
-### Code Transformation
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
 
 Our code repository showcases PySpark transformations tailored for data preprocessing and standardization. It covers essential steps such as data type conversion, handling missing values, applying custom transformations (e.g., extracting primary identifiers), managing timestamp columns, filtering records based on specified conditions, and aggregating data for meaningful insights. Additionally, it demonstrates grouping data by key identifiers, aggregating on specific column or list of columns, and structuring outputs for seamless integration with downstream systems.

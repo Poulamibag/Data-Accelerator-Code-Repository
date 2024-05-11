@@ -147,7 +147,7 @@ b9934c8b-003b-4ccb-932f-992637fad535|"[{8CT7K73UF98,""Wine - Magnotta - Cab Sauv
 <br /><br />
 
 ### Transformation 3 :
- To create array object from different columns into one column 
+
 
 <br />
 

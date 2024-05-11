@@ -53,7 +53,7 @@ In summary, SageMaker provides a powerful yet user-friendly platform for buildin
 ### Transformation 1 :
 To group data by orderID and lookup data from lookup table 
 
-Code:
+Code: <br />
 `from pyspark.sql.functions import concat_ws, col, when, to_timestamp, date_format, collect_list, struct, sum, first
 df = df.groupBy("orderID").agg(
     collect_list("Sub-Category").alias("Agg_Sub_Category"))`

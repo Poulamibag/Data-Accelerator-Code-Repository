@@ -37,7 +37,7 @@ In summary, SageMaker provides a powerful yet user-friendly platform for buildin
 
 <br />
 
-### Step-by-step guide to creating a data flow in Data Wrangler in Amazon SageMaker to achieve your requirements
+### Step-by-step guide to creating a data flow in Data Wrangler in Amazon SageMaker to achieve your requirements:
 1. Navigate to Data Wrangler: Go to the Amazon SageMaker console and select "Data Wrangler" from the left-hand menu.
 2. Create a New Flow: Click on "Create Flow" to start a new data flow.
 3. Select Data Source: Choose "Amazon S3" as the data source. Select the bucket "data-accelerator" and the folder "inbound" where your CSV files are located.

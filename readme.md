@@ -1,4 +1,4 @@
-![image](https://github.com/Poulamibag/Data-Accelerator-Code-Repository/assets/69474409/bb4e74a8-6c0d-43fa-9254-4b310c13965c)
+
 ![Logo](https://1000logos.net/wp-content/uploads/2021/04/Adobe-logo.png)
 
 

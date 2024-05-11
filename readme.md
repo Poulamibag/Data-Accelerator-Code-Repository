@@ -1,4 +1,4 @@
-
+![image](https://github.com/Poulamibag/Data-Accelerator-Code-Repository/assets/69474409/bb4e74a8-6c0d-43fa-9254-4b310c13965c)
 ![Logo](https://1000logos.net/wp-content/uploads/2021/04/Adobe-logo.png)
 
 
@@ -74,5 +74,24 @@ c0aaa7dd-ee6c-476e-b5f6-9a25116e1733 | 410.9 | 5NK7W82HR46 | Pants Custom Dry Cl
 af4c6bc4-1e01-4e07-9464-d8acab64888d | 78.7 | 6PE8MF9NP67 | Lettuce - Sea / Sea Asparagus | 7/27/2023 | jscottini0@washington.edu | null | Active
 af4c6bc4-1e01-4e07-9464-d8acab64888d | 837.22 | 5YD4HW7RF80 | Cake - Box Window 10x10x2.5 | 7/27/2023 | jscottini0@washington.edu | null | Active
 5e5cf0d0-6e6f-4979-84d2-fe40f1608af0 | 954.75 | 8CT7K73UF98 | Wine - Magnotta - Cab Sauv | 6/4/2023 | null | 899-252-7372 | Active
+
+<br />
+
+Lookup Table:
+Product ID | Sub-Category
+:---: | :---:
+4G09V46DQ64 | fruit
+6PE8MF9NP67 | vegetable
+6PE8MF9NP67 | vegetable
+5YD4HW7RF80 | cake
+
+<br />
+
+Sample Ouput:
+orderID | productLineItem | totalOrderValue | subCategory
+:---: | :---: | :---: | :---:
+af4c6bc4-1e01-4e07-9464-d8acab64888d | "[{4G09V46DQ64 |  ""Squash - Acorn"" |   4278.73} |  {6PE8MF9NP67 |  ""Lettuce - Sea / Sea Asparagus"" |  78.8 } |  {5YD4HW7RF80 |  ""Cake - Box Window 10x10x2.5"" |  827.22 }]" | $5194.65 | "[""fruit"" |  “vegetable” |  “cake”]"
+5e5cf0d0-6e6f-4979-84d2-fe40f1608af0 | "[{6PE8MF9NP67 |  ""Lettuce - Sea / Sea Asparagus"" |  78.7} | {8CT7K73UF98 |  ""Wine - Magnotta - Cab Sauv"" |  954.75}]" | $1033.45 | [“vegetable”]
+b9934c8b-003b-4ccb-932f-992637fad535 | "[{8CT7K73UF98 | ""Wine - Magnotta - Cab Sauv"" |  954.75}]" | $954.75 | []
 
   

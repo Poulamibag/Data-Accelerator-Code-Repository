@@ -11,7 +11,7 @@ Our objective is to develop a middleware solution capable of seamlessly transfor
 This solution is designed for organizations that receive data from customers in varying formats and need to unify and standardize it for further analysis or integration with AEP. It's suitable for scenarios where data needs to be cleansed, standardized, and enriched with additional insights before being ingested into AEP.
 
 
-<br /><br />
+<br />
 
 
 > [!NOTE]

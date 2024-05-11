@@ -34,3 +34,18 @@ Our code repository showcases PySpark transformations tailored for data preproce
 Through SageMaker's Data Wrangler, we can easily create data flows to ingest, preprocess, and transform data from diverse sources, including Amazon S3. The visual interface simplifies the creation of data transformation steps, enabling us to apply data type conversions, fill missing values, and perform advanced analytics effortlessly.
 Furthermore, SageMaker offers flexibility in incorporating custom PySpark transformations, as demonstrated in our code repository. This allows us to address specific business requirements and implement complex data processing logic tailored to our use case.
 In summary, SageMaker provides a powerful yet user-friendly platform for building end-to-end data pipelines, facilitating seamless data transformation and integration with Adobe Experience Platform (AEP) or other analytics platforms.
+
+<br />
+
+### Step-by-step guide to creating a data flow in Data Wrangler in Amazon SageMaker to achieve your requirements
+1. Navigate to Data Wrangler: Go to the Amazon SageMaker console and select "Data Wrangler" from the left-hand menu.
+2. Create a New Flow: Click on "Create Flow" to start a new data flow.
+3. Select Data Source: Choose "Amazon S3" as the data source. Select the bucket "data-accelerator" and the folder "inbound" where your CSV files are located.
+4. Import Data: Import the CSV file from the selected folder.
+5. Add Transformation Steps:
+   - Data Type Transformation: Click on the "+" icon to add a transformation step. Choose "Data Type" transformation, and apply it to the necessary columns to ensure correct data types.
+   - Fill Missing Values: Add another transformation step by clicking the "+" icon. Choose "Fill Missing Values" and configure it to fill empty email values with null.
+   - Custom Transformation: For the custom transformations, you need to define a Pyspark script: Click on the "+" icon to add a transformation step.  Choose "Custom Transformation". Write Pyspark code to define the custom function to extract the primary identifier and apply it to create a new column "primaryIdentifier". Also, write code to identify timestamp-type columns, convert timestamp format, filter rows with status "Active", get all column names except the grouping column ("email"), and group data by orderID while aggregating product information into a list.
+  
+
+  

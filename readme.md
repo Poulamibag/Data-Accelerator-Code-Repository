@@ -19,7 +19,7 @@ This solution is designed for organizations that receive data from customers in 
 
 
 
-<br /><br />
+<br />
 
 
 ## Code Transformation

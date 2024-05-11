@@ -13,4 +13,6 @@ This solution is designed for organizations that receive data from customers in 
 > [!NOTE]
 > The sample input comprises raw data files representing various customer-related information, product details, order records, and other relevant data. These files may come in formats like CSV, JSON, or Parquet, reflecting the diverse sources from which data is collected.
 
+
+###Code Transformation
 Our code repository showcases PySpark transformations tailored for data preprocessing and standardization. It covers essential steps such as data type conversion, handling missing values, applying custom transformations (e.g., extracting primary identifiers), managing timestamp columns, filtering records based on specified conditions, and aggregating data for meaningful insights. Additionally, it demonstrates grouping data by key identifiers, aggregating on specific column or list of columns, and structuring outputs for seamless integration with downstream systems.

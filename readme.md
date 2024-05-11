@@ -48,7 +48,7 @@ In summary, SageMaker provides a powerful yet user-friendly platform for buildin
    - Custom Transformation: For the custom transformations, you need to define a Pyspark script: Click on the "+" icon to add a transformation step.  Choose "Custom Transformation". Write Pyspark code to define the custom function to extract the primary identifier and apply it to create a new column "primaryIdentifier". Also, write code to identify timestamp-type columns, convert timestamp format, filter rows with status "Active", get all column names except the grouping column ("email"), and group data by orderID while aggregating product information into a list.
 
 > [!NOTE]
-> Dataflow Name :  CustomerData.flow
+> Dataflow Name :  `CustomerData.flow`
 
 <br />
 
